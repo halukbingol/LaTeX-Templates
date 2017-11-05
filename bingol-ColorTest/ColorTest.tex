@@ -1,0 +1,164 @@
+%\documentclass[12pt]{article}
+\documentclass[amsfonts,aps, prl,nofootinbib, twocolumn,showpacs, showkeys,longbibliography]{revtex4-1}
+
+
+% ==== HB Header Common Packages v20160423 ====V
+	\usepackage[utf8]{inputenc} % To use Unicode characters
+	\usepackage[iso]{datetime}
+	\usepackage{amsmath, amssymb}
+	%	\usepackage{etex}
+	
+	\usepackage[a4paper]{geometry}
+	
+	\usepackage{xcolor}
+	% black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, 
+	% magenta, olive, orange, pink, purple, red, teal, violet, white, yellow
+	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
+		{hyperref}
+	\usepackage{graphicx,epstopdf}
+	% \graphicspath{{fig}}
+	% \graphicspath{{../pdf/}{../jpeg/}}
+	% \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.eps}
+	% \DeclareGraphicsRule{.tif}{png}{.png}%
+	%	{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+	\usepackage{subfigure}
+% ==== HB Header Common Packages v20160423 ====A
+% ==== HB Header Specific v20160430 ====V
+	%\DeclareMathOperator{\hbSgn}{sgn}
+	%
+	\newcommand{\hbBigO}[1]{\mathcal{O}(#1)} % complexity
+	\newcommand{\hbAbs}[1]{| #1 |}	% absolute value
+	\newcommand{\hbAvrg}[1]{\overline{#1}}	% average
+%	\newcommand{\hbAvrg}[1]{\langle #1 \rangle}	% average
+	\newcommand{\hbVctr}[1]{\mathbf{#1}} % vector
+	\newcommand{\hbMtrx}[1]{\mathbf{#1}} % matrix
+	%
+	\newcommand{\hbFigSize}{0.9}
+	%
+	\hyphenation{
+		PageRank
+	}
+% ==== HB Header Specific  ====A
+% ==== HB Header Common Declarations v20160423 ====V
+	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today}} % version
+	%
+	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
+	\newcommand{\reftbl}[1]{Table~\ref{#1}}
+	\newcommand{\refsec}[1]{Sec.~\ref{#1}}
+	\newcommand{\refcite}[1]{Ref~\cite{#1}}
+	\newcommand{\hbQuote}[1]{{\small \textsf{``#1''}}}
+	%
+	\newcommand{\refthm}[1]{Theorem~\ref{#1}}
+	\newcommand{\refthmA}[2]{\refthm{#1}(\ref{#2}}
+	\newcommand{\reflem}[1]{Lemma~\ref{#1}}
+	\newcommand{\refdef}[1]{Definition~\ref{#1}}
+	\newcommand{\refexmp}[1]{Example~\ref{#1}}
+	%
+	\newcommand{\hbEtal}{et al. }
+	\newcommand{\hbIe}{i.e., }
+	\newcommand{\hbEg}{e.g., }
+	%
+	\newcommand{\hbFootnote}[2]{\footnote{{\color{red} @#1}#2}}
+	\newcommand{\hbIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
+	%	\newcommand{\hbIdea}[1]{}
+% ==== HB Header Common Declarations v20160423 ====A
+% ==== HB Track Changes v20160423 ====V
+	\usepackage{changes}
+	% black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, 
+	% magenta, olive, orange, pink, purple, red, teal, violet, white, yellow
+	
+	\definechangesauthor[name=Haluk Bingol,color=purple]{hb}
+	\definechangesauthor[name=Aaaa Bbbb,color=blue]{ab}
+	\setremarkmarkup{(#2)}
+	%
+	%\listofchanges   % use at the bottom
+	%
+	% samples
+	%\added[id=hb]{newText}
+	%\added[id=hb,remark={yourRemark}]{newText}
+	%\deleted[id=hb]{deletedText}
+	%\deleted[id=hb,remark=yourRemark]{deletedText}
+	%\replaced[id=hb]{newText}{deletedText}
+% ==== HB Track Changes v20160423 ====A
+
+
+
+
+% ================================================
+\begin{document}
+
+
+% ================================================
+\title{
+	TitleOfArticle
+}
+\author{Haluk O. Bingol$^{1}$}
+	\affiliation{
+		$^1$Bogazici University, istanbul, TR-34342, Turkey\\ 
+	}
+	%
+	\email{stefan.thurner@meduniwien.ac.at}
+
+\date{\hbTimeStamp}
+%\date{}     % Activate to display a given date or no date
+
+\begin{abstract}
+	AbstractHere
+\end{abstract}
+
+\keywords{multilayer interaction networks, keyword2}
+
+\maketitle
+
+
+
+
+
+% =======================================
+\section{Siyah beyaz laser de guzel gorunenler}
+color test\\
+{\color{black} black aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{blue} blue aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{magenta} magenta aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{purple} purple aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{violet} violet aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{teal} teal aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+
+
+
+
+% ================================================
+\section{Hepsi}
+
+
+color test\\
+{\color{black} black aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{blue} blue aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{brown} brown aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{cyan} cyan aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{darkgray} darkgray aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{gray} gray aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{green} green aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{lightgray} lightgray aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{lime} lime aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{magenta} magenta aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{olive} olive aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{orange} orange aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{pink} pink aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{purple} purple aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{red} red aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{teal} teal aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{violet} violet aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{white} white aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$} white\\
+{\color{yellow} yellow aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$} yellow\\
+{\color{blue} blue aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+
+color test\\
+{\color{black} black aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+{\color{darkgray} darkgray aaaa bbbb $\sin(x)$ $\sum_{i}^{j} a_{i}^{j}$}\\
+
+
+
+
+\end{document}  
