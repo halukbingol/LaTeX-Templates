@@ -5,6 +5,8 @@
 %\documentclass[twocolumn,preprintnumbers,amsmath,amssymb,superscriptaddress,pre]{revtex4}
 
 
+
+
 %: ==== HB Header Common Packages v20160423 ====V
 	\usepackage[utf8]{inputenc} % To use Unicode characters
 	\usepackage[iso]{datetime}
@@ -26,6 +28,7 @@
 %	\usepackage{subfigure}
 %\usepackage{subfig}
 \usepackage{subcaption}
+
 
 
 
@@ -55,6 +58,8 @@
 % ==== HB Header Common Declarations ====A
 
 
+
+
 %: ==== HB Header Common Math v20170530 ====V
 	% ams
 	\usepackage{amsmath, amssymb,amsfonts,amsthm}
@@ -81,6 +86,8 @@
 	\newtheorem*{rem}{Remark}
 	\newtheorem*{note}{Note}
 % ==== HB Header Common Math v20170530 ====A
+
+
 
 
 %: == HB Code Listing v20161002 ====V
@@ -124,6 +131,8 @@
 }
 \lstset{basicstyle=\ttfamily}
 % == HB Code Listing v20161002 ====A
+
+
 
 
 %: ==== HB Track Changes v20170522 ====V
@@ -215,7 +224,7 @@
 \author{Haluk O. Bingol}
 
 \affiliation{
-	Deptment of Computer Engineering,\\
+	Department of Computer Engineering,\\
 	Bogazici University\\
 	Istanbul, Turkey\\
 	bingol@boun.edu.tr
@@ -240,7 +249,6 @@
 \maketitle
 \tableofcontents
 
-
 %\linenumbers
 
 
@@ -261,6 +269,7 @@ It is developed by experience, necessities, best practices.
 
 Consider \LaTeX\ code as programming language code. 
 Actually it is a programming language.
+
 
 
 
@@ -766,32 +775,32 @@ See ``HB Header Common Declarations'' in the source for more.
 		Equation
 		&eq
 		&\verb!\refeq!
-		&\refeq{aaa}\\
+		&\refeq{eq:kBar}\\
 		%
 		Figure
 		&fig
 		&\verb!\reffig!
-		&\reffig{aaa}\\
+		&\reffig{fig:FigIStar}\\
 		%
 		Table
 		&tbl
 		&\verb!\reftbl!
-		&\reftbl{aa}\\
+		&\reftbl{tbl:gamma}\\
 		%
 		Section
 		&sec
 		&\verb!\refsec!
-		&\refsec{aa}\\
+		&\refsec{sec:kMeansAlgorithm}\\
 		%
 		Citation
 		&-
 		&\verb!\refcite!
-		&\refcite{aa}\\
+		&\refcite{duda2012pattern}\\
 		%
 		Definition
 		&def
 		&\verb!\refdef!
-		&\refdef{aaa}\\
+		&\refdef{def:PositiveIntegerPowers}\\
 		%
 		Theorem
 		&thm
@@ -806,7 +815,7 @@ See ``HB Header Common Declarations'' in the source for more.
 		List
 		&lst
 		&\verb!\reflst!
-		&\reflst{aa}\\
+		&\reflst{lst:QuickStart}\\
 		%
 		aaa
 		&aaa
@@ -849,9 +858,9 @@ Connect citation to the word with tilda as in the case here~\cite{%
 	AAa2017bb}.
 See the code.
 If a sentence starts with citation,
-start with \refcite{%
+start with~\refcite{%
 	AAa2017bb}  
-not with \cite{%
+not with~\cite{%
 	AAa2017bb}.
 
 
