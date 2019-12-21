@@ -53,6 +53,11 @@
 
 
 % ======================================= V
+
+%: ==== HB Version
+\newcommand{\hbTimeStampDraft}{{\color{red}--Draft-- v\today/\currenttime}} 
+\newcommand{\hbTimeStamp}{v\today} 
+
 %: ==== HB References
 \newcommand{\hbDefined}[1]{\textcolor{red}{{#1}}}	
 \newcommand{\hbEmph}[1]{\textcolor{orange}{#1}}
@@ -68,37 +73,54 @@
 		{#2}
 	\end{frame}
 }
+\newcommand{\hbSubsection}[2]{
+	\subsection{{#1}} 
+	\begin{frame}
+		\hbRemark{{\center{\Huge {#1}}}}\\
+		{#2}
+	\end{frame}
+}
 \newcommand{\hbSeparator}[2]{
 	\begin{frame}
 		\hbRemark{{\center{\Huge {#1}}}}\\
 		{#2}
 	\end{frame}
 }
+
+%: ==== HB N pt larger
+\makeatletter
+\newcommand{\hbFontLarger}[2]{%
+	\begingroup
+		\fontsize{\dimexpr\f@size pt+#1pt}{\f@baselineskip}\selectfont
+		#2%
+	\endgroup
+}
+\makeatother
+
+%: ==== HB PageNumber/TotalPages
+\newcommand*\oldmacro{}%
+	\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+	\oldmacro\hfill%
+	\insertframenumber\,/\,\inserttotalframenumber}
 % ======================================= A
 
 
 
 
-% ==== HB page number ===================== V
-\newcommand*\oldmacro{}%
-\let\oldmacro\insertshorttitle%
-\renewcommand*\insertshorttitle{%
- 	\oldmacro\hfill%
-	\insertframenumber\,/\,\inserttotalframenumber}
-% ==== HB page number ===================== A
-
-
-
-
 % ======================================= V
-\title{
+\title[
 	Research in SoSLab
+	\qquad 
+	\hbFontLarger{-2}{(\hbTimeStamp)}
+]{
+	Research in SoSLab Long Title
 }
 
 \author[Bingol]{Haluk O. Bingol}
 
 \institute{
-	Complex Systems research Lab (SoSLab)\\
+	Complex Systems Research Lab (SoSLab)\\
 	Dept. of Computer Engineering\\
 	Bogazici University
 }
