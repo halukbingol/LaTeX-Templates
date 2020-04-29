@@ -1,0 +1,424 @@
+% !TEX spellcheck = en_US
+
+% ======================================= V
+% (NC) 2019 Haluk Bingol
+% github.com/halukbingol/LaTeX-Templates
+%
+% Licensees may copy, distribute, display, and perform the work and make derivative works 
+% and remixes based on it only for non-commercial purposes. 
+% ======================================= A
+
+
+
+
+\documentclass{beamer}
+	\usetheme{Dresden}
+%	\usecolortheme{}
+%	\useinnertheme{}
+%	\useoutertheme{}
+%	\setbeamertemplate{bibliography item}[text]
+\usepackage{beamerthemesplit}
+%\usecolortheme{default}
+%\usecolortheme{structure}
+%\usepackage{beamerthemesplit} // Activate for custom appearance
+
+
+
+
+%: ==== HB Header Common Packages v20160423 ====V
+	\usepackage[utf8]{inputenc} % To use Unicode characters
+	\usepackage[iso]{datetime}
+	%	\usepackage{etex}
+	
+%	\usepackage[a4paper]{geometry}
+	
+	\usepackage{xcolor}
+	% black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, 
+	% magenta, olive, orange, pink, purple, red, teal, violet, white, yellow
+%	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
+%		{hyperref}
+	\usepackage{graphicx,epstopdf}
+	% \graphicspath{{fig}}
+%	\graphicspath{{../common/figures/}}
+	% \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.eps}
+	% \DeclareGraphicsRule{.tif}{png}{.png}%
+	%	{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%	\usepackage{subfigure}
+%\usepackage{subfig}
+%\usepackage{subcaption}
+%  ==== HB Header Common Packages v20160423 ==== A
+
+
+
+
+
+% ======================================= V
+
+%: ==== HB Version
+\newcommand{\hbTimeStampDraft}{{\color{red}--Draft-- v\today/\currenttime}} 
+\newcommand{\hbTimeStamp}{v\today} 
+
+%: ==== HB References
+\newcommand{\hbDefined}[1]{\textcolor{red}{{#1}}}	
+\newcommand{\hbEmph}[1]{\textcolor{orange}{#1}}
+\newcommand{\hbReference}[1]{\textcolor{blue}{{\scriptsize [#1]}}}
+\newcommand{\hbRemark}[1]{\textcolor{orange}{#1}}
+\newcommand{\hbQuestion}[1]{\textcolor{orange}{Q. #1}}
+
+% ==== separator
+\newcommand{\hbSection}[2]{
+	\section{{#1}} 
+	\begin{frame}
+		\hbRemark{{\center{\Huge {#1}}}}\\
+		{#2}
+	\end{frame}
+}
+\newcommand{\hbSubsection}[2]{
+	\subsection{{#1}} 
+	\begin{frame}
+		\hbRemark{{\center{\Huge {#1}}}}\\
+		{#2}
+	\end{frame}
+}
+\newcommand{\hbSeparator}[2]{
+	\begin{frame}
+		\hbRemark{{\center{\Huge {#1}}}}\\
+		{#2}
+	\end{frame}
+}
+
+%: ==== HB N pt larger
+\makeatletter
+\newcommand{\hbFontLarger}[2]{%
+	\begingroup
+		\fontsize{\dimexpr\f@size pt+#1pt}{\f@baselineskip}\selectfont
+		#2%
+	\endgroup
+}
+\makeatother
+
+%: ==== HB PageNumber/TotalPages
+\newcommand*\oldmacro{}%
+	\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+	\oldmacro\hfill%
+	\insertframenumber\,/\,\inserttotalframenumber}
+% ======================================= A
+
+
+
+
+% ======================================= V
+\title[
+	Research in SoSLab
+	\qquad 
+	\hbFontLarger{-2}{(\hbTimeStamp)}
+]{
+	Research in SoSLab Long Title
+}
+
+\author[Bingol]{Haluk O. Bingol}
+
+\institute{
+	Complex Systems Research Lab (SoSLab)\\
+	Dept. of Computer Engineering\\
+	Bogazici University
+}
+
+\date{
+	CMPE Conference\\ 
+	Istanbul, 2019-04-08
+}
+% ======================================= A
+
+
+
+
+\begin{document}
+% ======================================= 
+
+
+
+
+% ======================================= V Content
+\frame{\titlepage}
+
+%\frame{\tableofcontents}
+\begin{frame}\frametitle{Content}
+	\begin{columns}[T]
+	\column{2in}
+	\tableofcontents
+	% You might wish to add the option [pausesections]
+	\column{2.5in}
+		\includegraphics[width=\columnwidth]%
+%			{Fig-GossipLadies.png}\\
+			{Fig-A.pdf}\\
+	\end{columns}
+\end{frame}
+% ======================================= A
+
+
+
+
+% =======================================
+\hbSection{MyTitle}{MySubTitle}
+
+
+
+
+% =======================================
+\subsection{Single Column}
+
+
+
+
+% ======================================= V
+\begin{frame}\frametitle{Single Column}
+	\begin{itemize}
+
+		\item 
+		``More is different''
+
+		\item 
+		Interacting many agents
+
+		\item 
+		Emergence
+
+		\item 
+		\hbReference{
+			\href
+				{https://www.cmpe.boun.edu.tr/courses/cmpe556}
+				{cmpe556 Complex Systems}
+		}
+				
+		\item
+		\hbReference{
+			\href
+				{https://www.cmpe.boun.edu.tr/courses/cmpe557}
+				{cmpe557 Complex Systems}
+		}
+				
+		\item
+		\hbReference{
+			\href
+				{https://www.cmpe.boun.edu.tr/courses/cmpe59e}
+				{cmpe59e Evolutionary Dynamics}
+		}
+				
+		\item
+		\hbReference{
+			\href
+				{https://www.cmpe.boun.edu.tr/courses/cmpe59i}
+				{cmpe59i Brain Dynamics}
+		}
+				
+		\item
+		\hbReference{
+			\href
+				{https://www.cmpe.boun.edu.tr/tr/courses/cmpe481}
+				{cmpe481 Crowd Dynamics} (Networks, Crowds and Markets)
+		}
+
+	\end{itemize}
+\end{frame}
+% ======================================= A
+
+
+
+
+% =======================================
+\subsection{Two-Column}
+
+
+
+
+% ======================================= V
+\begin{frame}\frametitle{Two-Column}
+	\begin{columns}[T]
+	\begin{column}{.5\linewidth}   
+	    	\begin{itemize}
+		
+			\item
+			Language
+		
+			\item
+			Small memory
+		
+			\item
+			Complex Networks/\\Community Detection
+		
+			\item
+			Brain and Epilepsy
+		\end{itemize}
+	\end{column}
+	\begin{column}{.5\linewidth}
+	    	\begin{itemize}
+		
+			\item
+			Models
+		
+			\item
+			e-Learning
+			
+		\end{itemize}
+	\end{column}
+	\end{columns}
+\end{frame}
+% ======================================= A
+
+
+
+
+% =======================================
+\subsection{Language}
+
+
+
+
+% =======================================
+\subsection{2-Column with Image}
+
+
+
+
+% ======================================= V
+\begin{frame}\frametitle{2-Column with Image}
+	\begin{columns}[T]
+	\begin{column}{.5\linewidth}   
+	    	Effects of small memory
+		\begin{itemize}
+			\item
+			There are too many to remember
+		\end{itemize}
+
+		\includegraphics[width=.8\columnwidth]%
+			{Fig-B}\\
+		\hbReference{
+			\href
+				{https://dilbert.com/}
+				{Dilbert}
+		}
+			
+	\end{column}
+	\begin{column}{.5\linewidth}
+	    	Questions
+		\begin{itemize}
+		
+			\item
+			Which one to learn
+		
+			\item
+			Which one to forget
+			
+			\item
+			What if memory gets smaller?
+			
+			\item
+			Is big memory always good?
+			
+		\end{itemize}
+	\end{column}
+	\end{columns}
+	
+	\hbRemark{papers~\cite{%
+		bingol2005LNCS,%
+		bingol2008PRE,%
+		delipinar2009SRM,%
+		cetin2014PRE,%
+		cetin2014CMP,%
+		cetin2016ACS%
+	}}
+\end{frame}
+% ======================================= A
+
+
+
+
+% =======================================
+\hbSection{Step by Step}
+
+
+
+
+% ======================================= V
+\begin{frame}\frametitle{Step by Step}
+
+	The $1,000,000$ Question:  Backstage
+	\begin{enumerate}[A]
+		\item<2-5> 
+		James Madison
+		
+		\item<3-5> 
+		Harry Truman
+		
+		\item<4-> 
+		\color<6>[rgb]{0,0.6,0}Abraham Lincoln
+		
+		\item<5-5>  
+		Calvin Coolidge
+	\end{enumerate}
+	
+	\uncover<1-5>{Hints:}\\
+	\uncover<2-5>{James Madison ate broccoli.}\\
+	\uncover<3-5>{Harry Truman drank milk.}\\
+	\uncover<4-5>{Abe Lincoln raised bees.}\\
+	\uncover<5-5>{And Cal Coolidge grew silk.}\\
+
+\end{frame}
+% ======================================= A
+
+\section{aab}
+\AtBeginSection[]{
+	\begin{frame}{Table of Contents}
+		\tableofcontents[currentsection]
+		aab
+	\end{frame}
+}
+
+
+
+
+% ======================================= V
+\begin{frame}\frametitle{aaa}
+	\begin{table}[bt]
+	\begin{tabular}{|l|c|c|} 
+		\hline
+		\textbf{Ice Cream Store}      & \textbf{Location}& \textbf{How to Get There}   \\ 
+		\hline
+		\uncover<2->{Toscanini’s}	& \uncover<2->{Central Square}	& \uncover<2->{Just walk!}    \\
+		\uncover<3->{Herrell’s}	& \uncover<3->{Harvard Square}	& \uncover<3->{Red Line}      \\
+		\uncover<4->{J.P. Licks}	& \uncover<4->{Davis Square}	& \uncover<4->{Red Line}      \\
+		\uncover<5->{Ben \& Jerry’s}	& \uncover<5->{Newbury Street}	& \uncover<5->{Green Line}    \\ 
+		\hline
+	\end{tabular}
+	\end{table}
+\end{frame}
+% ======================================= A
+
+
+
+
+% ======================================= References
+\section*{References}
+
+
+
+
+% ======================================= V References bib
+\begin{frame}[allowframebreaks]\frametitle{References}
+	\setbeamertemplate{bibliography item}[text] % sets numbers in references
+%	\bibliographystyle{abbrv}
+%	\bibliographystyle{apalike}
+	\bibliographystyle{ieeetr}
+	\tiny\bibliography{bingol-template-presentation}
+	
+\end{frame}
+% ======================================= A
+
+
+
+
+
+% ======================================= 
+\end{document}
