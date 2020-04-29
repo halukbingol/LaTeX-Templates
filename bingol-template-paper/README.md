@@ -4,5 +4,5 @@
 A research paper
 
 ## Bingol-Template-ResponseToReviewers.tex
-A useful template responce to reviewers during the review process.
+A useful template response to reviewers during the review process.
 
