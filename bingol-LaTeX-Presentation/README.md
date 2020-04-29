@@ -1,2 +1,2 @@
-# BingolResearch
-Haluk Bingol research
+# Haluk Bingol Presentation Template
+
