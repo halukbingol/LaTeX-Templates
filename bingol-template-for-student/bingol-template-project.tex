@@ -15,13 +15,13 @@
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-\documentclass[11pt,a4]{article}
+\documentclass[11pt,a4,twocolumn]{article}
 
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change every time
-\newcommand{\hbWhat}{m1q3}
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** do not change
+\newcommand{\hbWhat}{project}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
@@ -57,6 +57,7 @@
 %\lhead{aaa} 
 %\chead{aaa}
 \rhead{\hbCourse-\hbWhat-\hbYou}
+\lfoot{project}
 \cfoot{\thepage/\pageref{LastPage}}
 \rfoot{\hbTimeStamp} 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -70,11 +71,13 @@
 
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V title
 \title{
-	\hbCourse-\hbWhat-\hbYou\\
+	Your Title\\
 	{\small 	
+		\hbCourse-\hbWhat-\hbYou\\
 		\hbTimeStamp\\
 	}
 }
+\author{Your Name}
 \date{}
 %
 \begin{document}
@@ -157,7 +160,7 @@
 Your text here.
 Remove this.
 }
-\lipsum[2-4]
+\lipsum[2-3]
 
 
 
@@ -169,7 +172,7 @@ Remove this.
 Your text here.
 Remove this.
 }
-\lipsum[2-4]
+\lipsum[2-3]
 
 
 
@@ -181,7 +184,14 @@ Remove this.
 Your text here.
 Remove this.
 }
-\lipsum[2-4]
+\lipsum[2-3]
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\bibliographystyle{ieeetr}
+
+\bibliography{bingol-template-project}
 
 
 

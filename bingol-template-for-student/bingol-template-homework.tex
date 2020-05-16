@@ -1,0 +1,191 @@
+% !TEX spellcheck = en_US
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V license
+% (NC) 2019 Haluk Bingol
+% github.com/halukbingol/LaTeX-Templates
+%
+% Licensees may copy, distribute, display, and perform the work and make derivative works 
+% and remixes based on it only for non-commercial purposes. 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\documentclass[11pt,a4]{article}
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change every time
+\newcommand{\hbWhat}{m1q3}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change once
+\newcommand{\hbYou}{BingolHaluk}
+\newcommand{\hbCourse}{cmpe220-2020-1}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V package
+\usepackage[utf8]{inputenc}
+%
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[cmex10]{amsmath}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2.3cm,bottom=4cm,left=2cm,right=4cm]{geometry}	% modified for electronic grading
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{enumitem}
+%
+\usepackage[iso]{datetime}
+\newcommand{\hbTimeStamp}{v\today/\currenttime} % version
+%
+\usepackage{lastpage}	% last page
+\usepackage{fancyhdr}	% header/footer
+\pagestyle{fancy}
+%\lhead{aaa} 
+%\chead{aaa}
+\rhead{\hbCourse-\hbWhat-\hbYou}
+\lfoot{homework}
+\cfoot{\thepage/\pageref{LastPage}}
+\rfoot{\hbTimeStamp} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+%
+\usepackage{lipsum}  % dummy text
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V title
+\title{
+	\hbCourse-\hbWhat-\hbYou\\
+	{\small 	
+		\hbTimeStamp\\
+	}
+}
+\date{}
+%
+\begin{document}
+\maketitle
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V README
+{\color{red} % ~~~~
+	\textbf{README.}
+	This is how to use documentation for file submission and reporting.
+	Read it.
+	Then make sure that you remove this part.
+
+	\emph{
+		Note that the name of this file does not comply 
+		the file naming convention described below. 
+		Do not forget to change it.
+	}
+	
+	\begin{itemize}
+		
+		\item 
+		Use A-B-C-D-E-X.F the file naming convention for all of your files,
+		e.g., ``cmpe220-2020-1-m1q1-BingolHaluk.tex'',
+		where:
+		\begin{description}
+			
+			\item[A]
+			Course code, e.g. ``cmpe220'' 
+			
+			\item[B]
+			Year in 4 digits, e.g. ``2020'' 
+			
+			\item[C] 
+			Semester in code: ``1'': Spring, ``2'': Summer, ``3'': Fall.
+			
+			\item[D] 
+			Assignment description, e.g., ``m1q3'', ``hw02'' or ``project''.
+			
+			\item[E]
+			Your last name and first name in camel case, e.g., ``BingolHaluk.tex''.
+			
+			\item[X]
+			If there is only one file, do not use this.
+			If there are more than one file in your submission, 
+			then you decide for a distinguisher.
+			For example,\\
+			``cmpe220-2020-1-m1q1-BingolHaluk-paper.tex'',\\
+			``cmpe220-2020-1-m1q1-BingolHaluk-paper-fig1.pdf'',\\
+			``cmpe220-2020-1-m1q1-BingolHaluk-paper-fig2.pdf'',\\
+			``cmpe220-2020-1-m1q1-BingolHaluk-paper.bib'',\\
+			``cmpe220-2020-1-m1q1-BingolHaluk-code-simulator.py'',\\
+			``cmpe220-2020-1-m1q1-BingolHaluk-code-dataAnalysis.py''.
+			
+			\item[F]
+			File extension, e.g., ``tex'', ``py''.
+		\end{description}
+		
+		\item 
+		Zip all the necessary files using the file convention,
+		e.g., ``cmpe220-2020-1-m1q1-BingolHaluk.zip''.
+		
+		\item 
+		Please submit your zip file to Moodle (moodle.boun.edu.tr) on time.
+		
+	\end{itemize}
+} % color ~~~~
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\section{aaa} 
+
+\textbf{
+Your text here.
+Remove this.
+}
+\lipsum[2-3]
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\subsection{bbb}
+
+\textbf{
+Your text here.
+Remove this.
+}
+\lipsum[2-3]
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\subsection{ccc}
+
+\textbf{
+Your text here.
+Remove this.
+}
+\lipsum[2-3]
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{document}
