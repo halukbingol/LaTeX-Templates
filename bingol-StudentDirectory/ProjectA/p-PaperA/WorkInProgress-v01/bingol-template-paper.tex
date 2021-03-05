@@ -1,3 +1,5 @@
+% !TEX spellcheck = en_US
+
 \documentclass[10pt,journal,compsoc]{IEEEtran}
 
 %\usepackage{cite}
@@ -21,10 +23,10 @@
 	\usepackage{xcolor}
 	% black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, 
 	% magenta, olive, orange, pink, purple, red, teal, violet, white, yellow
-		\colorlet{RED}{red}
 		\definecolor{darkred}{rgb}{0.8,0.1,0.1}
 		\definecolor{darkgreen}{rgb}{0,0.5,0}
 		\definecolor{darkblue}{rgb}{0,0,0.5}
+		\colorlet{RED}{red}
 
 	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
 		{hyperref}
@@ -102,14 +104,14 @@
 
 \begin{document}
 \title{
-	A network generator for pandemic simulations
+	Title of the paper
 }
 
 \author{
-	YourName~YourLastname,
+	YourName~Lastname,
 	Haluk~O.~Bingol
 	\IEEEcompsocitemizethanks{
-		\IEEEcompsocthanksitem M. Turker and H. O. Bingol  are with Bogazici University.
+		\IEEEcompsocthanksitem Y. Lastname and H. O. Bingol  are with Bogazici University.
 	}%
 %	\thanks{
 %		Manuscript received April 19, 2005; 
@@ -131,7 +133,7 @@
 	\end{abstract}
 	
 	\begin{IEEEkeywords}
-		Complex networks, epidemics.
+		KeywordA, keywordB.
 	\end{IEEEkeywords}
 }
 
@@ -141,70 +143,61 @@
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{Helper for \LaTeX\ Usage}
+\section{Helper for \LaTeX| Usage}
+
+Please read 
+\href
+	{https://github.com/halukbingol/LaTeX-Templates/tree/master/bingol-StudentDirectory/0readme}
+	{https://github.com/halukbingol/LaTeX-Templates/tree/master/bingol-StudentDirectory/0readme}
+for better \LaTeX\ usage.
+
+In short
+\begin{itemize}
+	
+	\item 
+	Try to use shorter lines.
+	
+	\item 
+	Sample of how to cite~\cite{%
+		chomsky1993,
+		wikiComplexNetwork%
+		}.
+	Bib file is defined at the end of this file with\\
+	\texttt{bibliographystyle{IEEEtran}} and\\
+	\texttt{bibliography{pCovid-v2}}.\\
+	Requires four compilations 
+	(i)~LaTeX, 
+	(ii)~BibTex, 
+	(iii)~LaTeX, and  
+	(iv)~LaTeX.
+	
+	\item 
+	Sample of how to reference a figure \reffig{fig:figureA}.
+	Requires two compilations 
+	(i)~LaTeX, 
+	(ii)~LaTeX.
+	
+	\item 
+	Sample of how to reference an equation \refeq{eq:bbb}.
+	Requires two compilations 
+	(i)~LaTeX, 
+	(ii)~LaTeX.
+	
+\end{itemize}
 
 
 
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Short lines}
-
-Try to use shorter lines.
-There are two reasons for this. 
-(I)~\LaTeX\ error messages is line based. 
-If your line is too long,
-It becomes difficult to locate the error.
-(ii)~git works line based. 
-Any change in a line has to be processed.
-When more than one editor works in the same file,
-Longer lines increase the chances for collision.
-Start every sentence in a new line.
-If line gets too long, brake into new line.
-``That'', ``where'', ``and'' are good candidates for breaking to a new line.
 
 
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Citations and BibTeX}
-Sample of how to cite~\cite{covid2020modeling}.
-Bib file is defined at the end of this file with\\
-\texttt{bibliographystyle{IEEEtran}} and\\
-\texttt{bibliography{hbTemplate-v01.bib}}.\\
-This requires four compilations 
-(i)~LaTeX, 
-(ii)~BibTex, 
-(iii)~LaTeX, and  
-(iv)~LaTeX.
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Referencing with in the document}
-
-Sample of how to reference a figure \reffig{fig:sampleA}.
-This requires two compilations 
-(i)~LaTeX, 
-(ii)~LaTeX.
-
-% +++++++++++++++++++++++++++++++++++++++ V
-%: -Fig.
 \begin{figure}[htbp]
 \begin{center}
 	\includegraphics[width=\columnwidth]
-		{Fig-1-SampleA}
-	\caption{Sample figure.}
-	\label{fig:sampleA}
+		{Fig-FigureA}
+	\caption{Houlsehold layer.}
+	\label{fig:figureA}
 \end{center}
 \end{figure}
-% +++++++++++++++++++++++++++++++++++++++ A
-
-
-Sample of how to reference an equation \refeq{eq:bbb}.
-This requires two compilations 
-(i)~LaTeX, 
-(ii)~LaTeX.
 
 \begin{align}
 	x = y
@@ -215,63 +208,22 @@ This requires two compilations
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Math}
-Use white space to make your math more readable.
-See the examples below:
+\section{Network}
 
-This is in line math
-$
-	\frac
-		{a}
-		{b}.
-$
-Note that there are two ways to do so with dollar and as
-\(
-	x_{1,2}
-	= \frac
-		{-b \pm \sqrt{b^{2} - 4 a c}}
-		{2 a}.
-\)
-
-Display math can be done with this way
-\[
-	x_{1,2}
-	= \frac
-		{-b \pm \sqrt{b^{2} - 4 a c}}
-		{2 a}.
-\]
- Note the use of white spaces in the source.
- 
- For subcripts and superscripts always use left and right curly braces.
- That is,
- Not $a^b$ but $a^{b}$.
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{IEEE sources}
-
-See 
-\begin{itemize}
-	
-	\item 
-	\url 
-		{https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/ieee-article-templates/}
-	
-	\item 
-	\url 
-		{https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-the-text-of-your-article/structure-your-article/}
-	
-\end{itemize}
 
 
 
 \section*{Acknowledgment}
 
-The authors would like to thank.
+The authors would like to thank Aaaa.
+%
+This work is partially supported by 
+the Turkish Directorate of Strategy and Budget
+under the TAM Project number 2007K12-873.
+
 
 \bibliographystyle{IEEEtran}
-\bibliography{hbTemplate-v01}
+\bibliography{bingol-template-paper}
 
 
 \end{document}
