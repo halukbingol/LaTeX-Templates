@@ -1,16 +1,23 @@
 % !TEX spellcheck = en_US
 
-\documentclass[10pt,journal,compsoc]{IEEEtran}
-
-%\usepackage{cite}
-%\usepackage[caption=false,font=footnotesize]{subfig}
-%\usepackage{url}
+\documentclass[11pt,a4,twocolumn]{article}
+%\documentclass[10pt,journal,compsoc]{IEEEtran}
+%\documentclass[11pt, oneside]{amsart}   	% use "amsart" instead of "article" for 
 
 
 
 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V
+\newcommand{\hSoFunctions}[2]{\ensuremath{#2^{#1}}} % set of functions from 1to2
+%\newcommand{\hAbs}[1]{\ensuremath{\left \lvert \, #1 \, \right \rvert} } % |x|
+%\newcommand{\hAbs}[1]{\ensuremath{\left \lvert  #1  \right \rvert} } % |x|
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Packages v2020-12-11
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB  Packages v2020-11-21
 	\usepackage[utf8]{inputenc} % To use Unicode characters
 	\usepackage[iso]{datetime}
 	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
@@ -26,7 +33,6 @@
 		\definecolor{darkred}{rgb}{0.8,0.1,0.1}
 		\definecolor{darkgreen}{rgb}{0,0.5,0}
 		\definecolor{darkblue}{rgb}{0,0,0.5}
-		\colorlet{RED}{red}
 
 	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
 		{hyperref}
@@ -71,6 +77,8 @@
 
 
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Common Declarations v20200421
+%	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
+	%
 	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
 	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
 	\newcommand{\reftbl}[1]{Table~\ref{#1}}
@@ -97,173 +105,42 @@
 
 
 
-\hyphenation{
-	op-tical net-works semi-conduc-tor
+\title{
+	Homework\\
+	CourseName Semester\\
 }
-
+\author{YourName}
+%\date{}							% Activate to display a given date or no date
 
 \begin{document}
-\title{
-	Title of the paper
-}
-
-\author{
-	YourName~Lastname,
-	Haluk~O.~Bingol
-	\IEEEcompsocitemizethanks{
-		\IEEEcompsocthanksitem Y. Lastname and H. O. Bingol  are with Bogazici University.
-	}%
-%	\thanks{
-%		Manuscript received April 19, 2005; 
-%		revised August 26, 2015.
-%	}%
-}
-
-
-\markboth{
-	\hbTimeStamp
-}%
-{
-	\hbTimeStamp
-}
-
-\IEEEtitleabstractindextext{%
-	\begin{abstract}
-		The abstract goes here.
-	\end{abstract}
-	
-	\begin{IEEEkeywords}
-		KeywordA, keywordB.
-	\end{IEEEkeywords}
-}
-
 \maketitle
 
 
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{Introduction}
+\section{YourName}
 
-Aaa.
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{A few reminders}
-
-It would be better if you clone git repository 
-\href
-	{https://github.com/halukbingol/LaTeX-Templates}
-	{https://github.com/halukbingol/LaTeX-Templates}.
-	
-Please compile and read MyLaTeXBestPractices in this repo first.
-Frequently pull to get updates.
-
-In short
-\begin{itemize}
-	
-	\item 
-	Try to use shorter lines.
-	
-	\item 
-	Sample of how to cite~\cite{%
-		chomsky1993,
-		wikiComplexNetwork%
-	}.
-	
-	\item
-	Use BibTeX for reference management.
-	Bib file is defined at the end of this file with
-	\texttt{bibliography}.
-	It requires four compilations 
-	(i)~LaTeX, 
-	(ii)~BibTex, 
-	(iii)~LaTeX, and  
-	(iv)~LaTeX.
-	
-	\item 
-	Sample of how to reference a figure \reffig{fig:figureA}.
-	It requires two compilations 
-	(i)~LaTeX, 
-	(ii)~LaTeX.
-	
-	\item 
-	Sample of how to reference an equation \refeq{eq:bbb}.
-	It requires two compilations 
-	(i)~LaTeX, 
-	(ii)~LaTeX.
-	
-\end{itemize}
-
-
-% +++++++++++++++++++++++++++++++++++++++ V
-%: -Fig.
-\begin{figure}[htbp]
-\begin{center}
-	\includegraphics[width=\columnwidth]
-		{Fig-FigureA}
-	\caption{Houlsehold layer.}
-	\label{fig:figureA}
-\end{center}
-\end{figure}
-% +++++++++++++++++++++++++++++++++++++++ A
+Your solution.
 
 
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{Related work}
+\subsection{Part A}
 
-Aaa.
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{Our model/method}
-
-Aaa
-\begin{align}
-	x = y
-	\label{eq:bbb}
-\end{align}
-bbb.
+If homework has parts.
 
 
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{Finding/Discussion}
+\subsection{Part B}
 
-Aaa.
-
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section{Conclusion}
-
-Aaa.
+If homework has parts.
 
 
 
 
-\section*{Acknowledgment}
 
-The authors would like to thank Aaaa.
-%
-This work is partially supported by 
-the Turkish Directorate of Strategy and Budget
-under the TAM Project number 2007K12-873.
-
-
-\bibliographystyle{IEEEtran}
-\bibliography{bingol-template-paper}
-
-
-\end{document}
-
-
+\end{document}  
