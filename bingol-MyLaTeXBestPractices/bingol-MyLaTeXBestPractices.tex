@@ -76,7 +76,12 @@
 	%
 	\newcommand{\hQuote}[1]{{\small \textsf{``#1''}}}
 	%
-	\newcommand{\hCode}[1]{\texttt{#1}}
+%	\newcommand{\hCode}[1]{\texttt{#1}}
+%	\newcommand{\hCode}[1]{\texttt{{\small #1}}}
+	\newcommand{\hCode}[1]{\texttt{{\footnotesize #1}}}
+%	\newcommand{\hTex}[1]{{\footnotesize \verb!#1!}}
+%	\newcommand{\hTex}[1]{\verb!#1!}
+	
 	%
 	\newcommand{\hbIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
 	\newcommand{\hbFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
@@ -738,178 +743,6 @@ Refer tables using \verb!\reftbl! as \reftbl{tbl:tableA}.
 
 
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=
-\section{Math}
-
-Please see \LaTeX\ cheat sheet available at
-\href
-	{https://github.com/halukbingol/zintCheatSheet-LaTeX-DiscreteMath}
-	{https://github.com/halukbingol/zintCheatSheet-LaTeX-DiscreteMath}
-for many \LaTeX\ tricks.
-
-Please note the usage of spaces while writing math in \hbDTex\ file.
-Proper usage of space will improve readability of your \LaTeX\ code.
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Math in-line mode}
-
-This is math ``in-line'' mode,
-i.e., math with in the lines of text. 
-There are two ways to switch to in-line math mode.
-Use \verb!\( ... \)!, which is the \LaTeX\ way, and
-\verb!$ ... $!, which is the \TeX\ way.
-These are examples of in-line math usages.
-The row sum of row $i$ is given as
-$
-	s_{i} = \sum_{j=1}^{N} a_{i j}
-$,
-where $\mathbf{A} = [a_{i j}]$ is a matrix.
-One more example is
-\(
-	e_{\mu x} 
-	= \frac{a_{\mu x}}{\sum_{x'=1}^{S} a_{\mu x'}},
-\)
-and
-\(
-	d_{x \mu} 
-	= \frac{a_{\mu x}}{\sum_{\mu'=1}^{M} a_{\mu'x}}.
-\)
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Math in display mode}
-
-If you want your math in ``display'' mode there are two options. 
-If you are not going to refer the equation again, 
-use \verb!\[ ... \]!.
-This is the same example in display mode
-\[
-	e_{\mu x} 
-	= \frac{a_{\mu x}}{\sum_{x'=1}^{S} a_{\mu x'}},
-	\quad
-	d_{x \mu} 
-	= \frac{a_{\mu x}}{\sum_{\mu'=1}^{M} a_{\mu'x}}.
-\]
-Note the usage of \verb!\quad! to separate the two.
-
-If you are going to refer the equation in the text,
-then it should be numbered.
-To do that,
-use \verb!\begin{align} ... \end{align}! to obtain
-\begin{align}
-	a_{ij} =
-		\frac{1}{M}
-		\sum_{\mu = 1}^{M} 
-		{\sum_{x = 1}^{S} 
-			e_{\mu x}^{(i)}
-			d_{x \mu}^{(j)} }.
-	\label{eq:aij}
-\end{align}
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Multi-line equations}
-
-If you have multiple line derivation,
-then \hCode{align} block with \verb!&! is the solution.
-\begin{align}
-	a 
-	&= bbbbb\\
-	&= cccc \label{eq:cccc}\\
-	&= ddd.
-\end{align}
-Note that each line has a number that can be referred.
-
-If you do not refer the equation later,
-get rid off numbers by using \hCode{align*} block.
-as
-\begin{align*}
-	a 
-	&= bbbbb\\
-	&= cccc\\
-	&= ddd.
-\end{align*}
-
-It is possible to explain how you move from one line to the next as 
-\begin{align*}
-	a 
-	&= bbbbb
-		&\text{ because } x = 5\\
-	&= cccc
-		&\text{ side $AB$ intersects side $BC$}\\
-	&= ddd.
-\end{align*}
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsubsection{Referring to equations}
-
-Refer equations using \verb!\refeq! as \refeq{eq:aij}.
-It is possible to refer a line in a multiple line derivation as \refeq{eq:cccc}.
-You can refer to an equation \refeq{eq:equationInAppendix} in the appendix, too.
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Subscripts and superscripts}
-
-Always use curly brackets when you use subscripts or superscripts 
-even if there is no need due to single symbol.
-For example \verb!a_{i}! is better than \verb!a_i! 
-if you consider
-\verb!a_{ij}! and \verb!a_ij!.
-They produce
-$a_{i}$,
-$a_i$,
-$a_{ij}$, and 
-$a_ij$,
-respectively.
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=
-\subsubsection{Some examples}
-
-\[
-	\sum_{x = 1}^{S} 
-		e_{\mu x}^{(i)}
-		d_{x \mu}^{(j)} 
-\]
-\[
-	A= 	
-	\frac
-		{1}
-		{2 {\hAbs{\mathcal{C}} \choose 2}} 
-	\sum_{i \in \mathcal{C}}
-	\sum_{
-		\substack{
-			j \in \mathcal{C}\\
-			j \neq i
-		}
-	} 
-	b_{ij}.
-\]
-\[
-	\hat{K} =
-		\\hArgmax
-			{K}
-			{{\mathbb{P}_{K}}}.
-\]
-
-
-
-
 
 
 
@@ -1086,7 +919,9 @@ or individually \reffig{fig:figureB} and \reffig{fig:figureC} as required.
 Use citation at  the end of sentence as much as possible.
 In this way, 
 you can see the citations easily in the text.
-Use \verb!\bibliographystyle{ieeetr}! for bibliography,
+Use 
+{\footnotesize{\verb!\bibliographystyle{ieeetr}!}
+for bibliography,
 which provides the title of the cited resource, too. 
 
 
@@ -1122,7 +957,7 @@ as in the case here~\cite{%
 	acemoglu2010}.
 This nicely handles the problems occur in the citations happening at the line ends.
 
-In .pdf file, citations are in color and usually acts as a link.
+In \hCode{.pdf} file, citations are in color and usually acts as a link.
 If you want to modify,
 see 
 \hCode{linkcolor=red}
@@ -1152,6 +987,22 @@ in this order.
 
 
 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsubsection{Unsolved problems}
+
+Citing a webpage is an open question for me.
+It is suggested to use \hCode{@online} but my system (TeXShop+BibDesk) does not support that.
+See
+\href
+	{https://tex.stackexchange.com/questions/211364/what-is-the-best-way-to-handle-bibliographies-which-include-a-lot-of-online-sour}
+	{What is the best way to handle bibliographies which include a lot of online sources?}, 
+\href
+	{https://tex.stackexchange.com/questions/268433/bibdesk-incompatible-webpage-field}
+	{Bibdesk incompatible webpage field}
+
+
+
+
 
 
 
@@ -1176,6 +1027,23 @@ It is recommended to use \hCode{.gitignore} in
 	{https://github.com/halukbingol/gitignore}
 	{https://github.com/halukbingol/gitignore},
 which is configured for \LaTeX\ usages as well as some coding such as java.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Some useful hints}
+
+In order to see the differences between last two commits,
+type \hCode{git diff HEAD\^\ HEAD} in the terminal.
+It is better to use \hCode{git difftool HEAD\^\ HEAD} 
+if your visual diff tool is configured.
+See
+\href
+	{https://stackoverflow.com/questions/9903541/finding-diff-between-current-and-last-version}
+	{Finding diff between current and last version}~\cite{%
+	stackoverflow0findingDiff}.
+
 
 
 
@@ -1246,6 +1114,178 @@ One final search in the \hbDTex\ file for ``@'' should help you to locate unremo
 
 
 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=
+\section{Math}
+
+Please see \LaTeX\ cheat sheet available at
+\href
+	{https://github.com/halukbingol/zintCheatSheet-LaTeX-DiscreteMath}
+	{https://github.com/halukbingol/zintCheatSheet-LaTeX-DiscreteMath}
+for many \LaTeX\ tricks.
+
+Please note the usage of spaces while writing math in \hbDTex\ file.
+Proper usage of space will improve readability of your \LaTeX\ code.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Math in-line mode}
+
+This is math ``in-line'' mode,
+i.e., math with in the lines of text. 
+There are two ways to switch to in-line math mode.
+Use \verb!\( ... \)!, which is the \LaTeX\ way, and
+\verb!$ ... $!, which is the \TeX\ way.
+These are examples of in-line math usages.
+The row sum of row $i$ is given as
+$
+	s_{i} = \sum_{j=1}^{N} a_{i j}
+$,
+where $\mathbf{A} = [a_{i j}]$ is a matrix.
+One more example is
+\(
+	e_{\mu x} 
+	= \frac{a_{\mu x}}{\sum_{x'=1}^{S} a_{\mu x'}},
+\)
+and
+\(
+	d_{x \mu} 
+	= \frac{a_{\mu x}}{\sum_{\mu'=1}^{M} a_{\mu'x}}.
+\)
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Math in display mode}
+
+If you want your math in ``display'' mode there are two options. 
+If you are not going to refer the equation again, 
+use \verb!\[ ... \]!.
+This is the same example in display mode
+\[
+	e_{\mu x} 
+	= \frac{a_{\mu x}}{\sum_{x'=1}^{S} a_{\mu x'}},
+	\quad
+	d_{x \mu} 
+	= \frac{a_{\mu x}}{\sum_{\mu'=1}^{M} a_{\mu'x}}.
+\]
+Note the usage of \verb!\quad! to separate the two.
+
+If you are going to refer the equation in the text,
+then it should be numbered.
+To do that,
+use \verb!\begin{align} ... \end{align}! to obtain
+\begin{align}
+	a_{ij} =
+		\frac{1}{M}
+		\sum_{\mu = 1}^{M} 
+		{\sum_{x = 1}^{S} 
+			e_{\mu x}^{(i)}
+			d_{x \mu}^{(j)} }.
+	\label{eq:aij}
+\end{align}
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Multi-line equations}
+
+If you have multiple line derivation,
+then \hCode{align} block with \verb!&! is the solution.
+\begin{align}
+	a 
+	&= bbbbb\\
+	&= cccc \label{eq:cccc}\\
+	&= ddd.
+\end{align}
+Note that each line has a number that can be referred.
+
+If you do not refer the equation later,
+get rid off numbers by using \hCode{align*} block.
+as
+\begin{align*}
+	a 
+	&= bbbbb\\
+	&= cccc\\
+	&= ddd.
+\end{align*}
+
+It is possible to explain how you move from one line to the next as 
+\begin{align*}
+	a 
+	&= bbbbb
+		&\text{ because } x = 5\\
+	&= cccc
+		&\text{ side $AB$ intersects side $BC$}\\
+	&= ddd.
+\end{align*}
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsubsection{Referring to equations}
+
+Refer equations using \verb!\refeq! as \refeq{eq:aij}.
+It is possible to refer a line in a multiple line derivation as \refeq{eq:cccc}.
+You can refer to an equation \refeq{eq:equationInAppendix} in the appendix, too.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Subscripts and superscripts}
+
+Always use curly brackets when you use subscripts or superscripts 
+even if there is no need due to single symbol.
+For example \verb!a_{i}! is better than \verb!a_i! 
+if you consider
+\verb!a_{ij}! and \verb!a_ij!.
+They produce
+$a_{i}$,
+$a_i$,
+$a_{ij}$, and 
+$a_ij$,
+respectively.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=
+\subsubsection{Some examples}
+
+\[
+	\sum_{x = 1}^{S} 
+		e_{\mu x}^{(i)}
+		d_{x \mu}^{(j)} 
+\]
+\[
+	A= 	
+	\frac
+		{1}
+		{2 {\hAbs{\mathcal{C}} \choose 2}} 
+	\sum_{i \in \mathcal{C}}
+	\sum_{
+		\substack{
+			j \in \mathcal{C}\\
+			j \neq i
+		}
+	} 
+	b_{ij}.
+\]
+\[
+	\hat{K} =
+		\hArgmax
+			{K}
+			{{\mathbb{P}_{K}}}.
+\]
+
+
+
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 \section*{Acknowledgments}
 
@@ -1293,7 +1333,8 @@ which will be referred else where.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Header Part}
 
-Note that timestamp \hbTimeStamp\ that helps to keep track of versions while the paper is developed.
+Note that timestamp \hbTimeStamp\ that helps to keep track of versions 
+while the paper is being developed.
 Do not forget to remove it before submission.
 
 
@@ -1353,6 +1394,8 @@ It has some features that I use.
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=
+%\DeclareBibliographyAlias{webpage}{online}
+%https://tex.stackexchange.com/questions/268433/bibdesk-incompatible-webpage-field
 \bibliographystyle{ieeetr}
 
 \bibliography{bingol-MyLaTeXBestPractices}
