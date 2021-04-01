@@ -2,21 +2,15 @@
 
 \documentclass[10pt,journal,compsoc]{IEEEtran}
 
-%\usepackage{cite}
-%\usepackage[caption=false,font=footnotesize]{subfig}
-%\usepackage{url}
 
 
 
-
-
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Packages v2020-12-11
-	\usepackage[utf8]{inputenc} % To use Unicode characters
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Packages v2021-04-01
+	\usepackage[utf8]{inputenc} 
 	\usepackage[iso]{datetime}
 	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
-	%	\usepackage{etex}
 	\usepackage{amssymb}
-	\usepackage{enumitem}
+	\usepackage{enumerate}
 	
 	\usepackage[a4paper]{geometry}
 	
@@ -27,7 +21,7 @@
 		\definecolor{darkgreen}{rgb}{0,0.5,0}
 		\definecolor{darkblue}{rgb}{0,0,0.5}
 		\colorlet{RED}{red}
-
+	
 	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
 		{hyperref}
 	\usepackage{graphicx,epstopdf}
@@ -44,33 +38,7 @@
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Math v2020-11-21
-	\usepackage{amsmath, amssymb,amsfonts,amsthm}
-	\newcommand{\hDefined}[1]{\textcolor{darkred}{\textit{#1}}}	
-	\newcommand{\hVec}[1]{\mathbf{#1}}	 
-	\newcommand{\hAbs}[1]{\ensuremath{\left \lvert \, #1 \, \right \rvert} } % |x|
-	\newcommand{\hMat}[1]{\mathbf{#1}}
-	\newcommand{\hArgmin}[2]{\underset{#1}{\operatorname{arg \, min}}\;#2}
-	\newcommand{\hArgmax}[2]{\underset{#1}{\operatorname{arg \, max}}\;#2}
-	%
-	\theoremstyle{plain}
-	\newtheorem{thm}{Theorem}[section]
-	\newtheorem{lem}[thm]{Lemma}
-	\newtheorem{prop}[thm]{Proposition}
-	\newtheorem*{cor}{Corollary}
-	\theoremstyle{definition}
-	\newtheorem{defn}{Definition}[section]
-	\newtheorem{conj}{Conjecture}[section]
-	\newtheorem{exmp}{Example}[section]
-	\theoremstyle{remark}
-	\newtheorem*{rem}{Remark}
-	\newtheorem*{note}{Note}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
-
-
-
-
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Common Declarations v20200421
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Declarations v2021-04-01
 	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
 	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
 	\newcommand{\reftbl}[1]{Table~\ref{#1}}
@@ -85,14 +53,38 @@
 	\newcommand{\refdef}[1]{Definition~\ref{#1}}
 	\newcommand{\refexmp}[1]{Example~\ref{#1}}
 	%
-	\newcommand{\hbQuote}[1]{{\small \textsf{``#1''}}}
-	%
-	\newcommand{\hbCode}[1]{\texttt{#1}}
-	%
-	\newcommand{\hbIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
-	\newcommand{\hbFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
+	\newcommand{\hQuote}[1]{{\small \textsf{``#1''}}}
+	\newcommand{\hCode}[1]{\texttt{#1}}
+	\newcommand{\hIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
+	\newcommand{\hFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Math v2021-04-01
+	\usepackage{amsmath, amssymb,amsfonts,amsthm}
+	%
+	\theoremstyle{plain}
+	\newtheorem{thm}{Theorem}[section]
+	\newtheorem{lem}[thm]{Lemma}
+	\newtheorem{prop}[thm]{Proposition}
+	\newtheorem*{cor}{Corollary}
+	\theoremstyle{definition}
+	\newtheorem{defn}{Definition}[section]
+	\newtheorem{conj}{Conjecture}[section]
+	\newtheorem{exmp}{Example}[section]
+	\theoremstyle{remark}
+	\newtheorem*{rem}{Remark}
+	\newtheorem*{note}{Note}
+	%
+	\newcommand{\hDefined}[1]{\textcolor{darkred}{\textit{#1}}}	
+	\newcommand{\hVec}[1]{\mathbf{#1}}	 
+	\newcommand{\hAbs}[1]{\ensuremath{\left \lvert \, #1 \, \right \rvert} } % |x|
+	\newcommand{\hMat}[1]{\mathbf{#1}}
+	\newcommand{\hArgmin}[2]{\underset{#1}{\operatorname{arg \, min}}\;#2}
+	\newcommand{\hArgmax}[2]{\underset{#1}{\operatorname{arg \, max}}\;#2}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
@@ -102,7 +94,12 @@
 }
 
 
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V
 \begin{document}
+
 \title{
 	Title of the paper
 }
@@ -118,7 +115,6 @@
 %		revised August 26, 2015.
 %	}%
 }
-
 
 \markboth{
 	\hbTimeStamp
@@ -138,6 +134,7 @@
 }
 
 \maketitle
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
@@ -157,45 +154,13 @@ It would be better if you clone git repository
 \href
 	{https://github.com/halukbingol/LaTeX-Templates}
 	{https://github.com/halukbingol/LaTeX-Templates}.
-	
-Please compile and read MyLaTeXBestPractices in this repo first.
 Frequently pull to get updates.
-
-In short
-\begin{itemize}
 	
-	\item 
-	Try to use shorter lines.
-	
-	\item 
-	Sample of how to cite~\cite{%
-		chomsky1993,
-		wikiComplexNetwork%
-	}.
-	
-	\item
-	Use BibTeX for reference management.
-	Bib file is defined at the end of this file with
-	\texttt{bibliography}.
-	It requires four compilations 
-	(i)~LaTeX, 
-	(ii)~BibTex, 
-	(iii)~LaTeX, and  
-	(iv)~LaTeX.
-	
-	\item 
-	Sample of how to reference a figure \reffig{fig:figureA}.
-	It requires two compilations 
-	(i)~LaTeX, 
-	(ii)~LaTeX.
-	
-	\item 
-	Sample of how to reference an equation \refeq{eq:bbb}.
-	It requires two compilations 
-	(i)~LaTeX, 
-	(ii)~LaTeX.
-	
-\end{itemize}
+Please compile and read 
+\href
+	{https://github.com/halukbingol/LaTeX-Templates/tree/master/bingol-MyLaTeXBestPractices}
+	{MyLaTeXBestPractices} 
+in this repo first.
 
 
 % +++++++++++++++++++++++++++++++++++++++ V
@@ -204,7 +169,7 @@ In short
 \begin{center}
 	\includegraphics[width=\columnwidth]
 		{Fig-FigureA}
-	\caption{Houlsehold layer.}
+	\caption{Household layer.}
 	\label{fig:figureA}
 \end{center}
 \end{figure}

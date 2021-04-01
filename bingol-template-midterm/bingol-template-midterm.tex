@@ -1,0 +1,135 @@
+% !TEX spellcheck = en_US
+
+\documentclass[11pt,a4,twocolumn]{article}
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V specific 
+%\usepackage{tikz}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Packages v2020-12-11
+	\usepackage[utf8]{inputenc} % To use Unicode characters
+	\usepackage[iso]{datetime}
+	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
+	%	\usepackage{etex}
+	\usepackage{amssymb}
+%	\usepackage{enumitem}
+	\usepackage{enumerate}
+
+	
+	\usepackage[a4paper]{geometry}
+	
+	\usepackage{xcolor}
+	% black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, 
+	% magenta, olive, orange, pink, purple, red, teal, violet, white, yellow
+		\definecolor{darkred}{rgb}{0.8,0.1,0.1}
+		\definecolor{darkgreen}{rgb}{0,0.5,0}
+		\definecolor{darkblue}{rgb}{0,0,0.5}
+		\colorlet{RED}{red}
+
+
+	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
+		{hyperref}
+	\usepackage{graphicx,epstopdf}
+	% \graphicspath{{fig}}
+	\graphicspath{{../common/figures/}}
+	% \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.eps}
+	% \DeclareGraphicsRule{.tif}{png}{.png}%
+	%	{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%	\usepackage{subfigure}
+%	\usepackage{subfig}
+	\usepackage{subcaption}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Common Declarations v20200421
+%	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
+	%
+	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
+	\newcommand{\reftbl}[1]{Table~\ref{#1}}
+	\newcommand{\refsec}[1]{Sec.~\ref{#1}}
+	\newcommand{\refcite}[1]{Ref~\cite{#1}}
+	\newcommand{\refalg}[1]{Algorithm~\ref{#1}}
+	\newcommand{\reflst}[1]{List.~\ref{#1}}  % code listing
+	%
+	\newcommand{\refthm}[1]{Theorem~\ref{#1}}
+	\newcommand{\refthmA}[2]{\refthm{#1}(\ref{#2}}
+	\newcommand{\reflem}[1]{Lemma~\ref{#1}}
+	\newcommand{\refdef}[1]{Definition~\ref{#1}}
+	\newcommand{\refexmp}[1]{Example~\ref{#1}}
+	%
+	\newcommand{\hbQuote}[1]{{\small \textsf{``#1''}}}
+	%
+	\newcommand{\hbCode}[1]{\texttt{#1}}
+	%
+	\newcommand{\hbIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
+	\newcommand{\hbFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Math v2020-11-21
+	\usepackage{amsmath, amssymb,amsfonts,amsthm}
+	\newcommand{\hDefined}[1]{\textcolor{darkred}{\textit{#1}}}	
+	\newcommand{\hVec}[1]{\mathbf{#1}}	 
+	\newcommand{\hAbs}[1]{\ensuremath{\left \lvert \, #1 \, \right \rvert} } % |x|
+	\newcommand{\hMat}[1]{\mathbf{#1}}
+	\newcommand{\hArgmin}[2]{\underset{#1}{\operatorname{arg \, min}}\;#2}
+	\newcommand{\hArgmax}[2]{\underset{#1}{\operatorname{arg \, max}}\;#2}
+	%
+	\theoremstyle{plain}
+	\newtheorem{thm}{Theorem}[section]
+	\newtheorem{lem}[thm]{Lemma}
+	\newtheorem{prop}[thm]{Proposition}
+	\newtheorem*{cor}{Corollary}
+	\theoremstyle{definition}
+	\newtheorem{defn}{Definition}[section]
+	\newtheorem{conj}{Conjecture}[section]
+	\newtheorem{exmp}{Example}[section]
+	\theoremstyle{remark}
+	\newtheorem*{rem}{Remark}
+	\newtheorem*{note}{Note}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+\title{
+	Midterm-Qx\\
+	CourseName Semester\\
+}
+\author{YourName}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\section{YourName}
+
+Your solution.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Part A}
+
+If the question has parts.
+
+
+
+
+
+\end{document}  

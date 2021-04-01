@@ -12,15 +12,12 @@
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Packages v2020-12-11
-	\usepackage[utf8]{inputenc} % To use Unicode characters
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Packages v2021-04-01
+	\usepackage[utf8]{inputenc} 
 	\usepackage[iso]{datetime}
 	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
-	%	\usepackage{etex}
 	\usepackage{amssymb}
-%	\usepackage{enumitem}
 	\usepackage{enumerate}
-
 	
 	\usepackage[a4paper]{geometry}
 	
@@ -31,8 +28,7 @@
 		\definecolor{darkgreen}{rgb}{0,0.5,0}
 		\definecolor{darkblue}{rgb}{0,0,0.5}
 		\colorlet{RED}{red}
-
-
+	
 	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
 		{hyperref}
 	\usepackage{graphicx,epstopdf}
@@ -49,9 +45,7 @@
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Common Declarations v20200421
-%	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
-	%
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Declarations v2021-04-01
 	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
 	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
 	\newcommand{\reftbl}[1]{Table~\ref{#1}}
@@ -66,25 +60,17 @@
 	\newcommand{\refdef}[1]{Definition~\ref{#1}}
 	\newcommand{\refexmp}[1]{Example~\ref{#1}}
 	%
-	\newcommand{\hbQuote}[1]{{\small \textsf{``#1''}}}
-	%
-	\newcommand{\hbCode}[1]{\texttt{#1}}
-	%
-	\newcommand{\hbIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
-	\newcommand{\hbFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
+	\newcommand{\hQuote}[1]{{\small \textsf{``#1''}}}
+	\newcommand{\hCode}[1]{\texttt{#1}}
+	\newcommand{\hIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
+	\newcommand{\hFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Math v2020-11-21
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Math v2021-04-01
 	\usepackage{amsmath, amssymb,amsfonts,amsthm}
-	\newcommand{\hDefined}[1]{\textcolor{darkred}{\textit{#1}}}	
-	\newcommand{\hVec}[1]{\mathbf{#1}}	 
-	\newcommand{\hAbs}[1]{\ensuremath{\left \lvert \, #1 \, \right \rvert} } % |x|
-	\newcommand{\hMat}[1]{\mathbf{#1}}
-	\newcommand{\hArgmin}[2]{\underset{#1}{\operatorname{arg \, min}}\;#2}
-	\newcommand{\hArgmax}[2]{\underset{#1}{\operatorname{arg \, max}}\;#2}
 	%
 	\theoremstyle{plain}
 	\newtheorem{thm}{Theorem}[section]
@@ -98,12 +84,19 @@
 	\theoremstyle{remark}
 	\newtheorem*{rem}{Remark}
 	\newtheorem*{note}{Note}
+	%
+	\newcommand{\hDefined}[1]{\textcolor{darkred}{\textit{#1}}}	
+	\newcommand{\hVec}[1]{\mathbf{#1}}	 
+	\newcommand{\hAbs}[1]{\ensuremath{\left \lvert \, #1 \, \right \rvert} } % |x|
+	\newcommand{\hMat}[1]{\mathbf{#1}}
+	\newcommand{\hArgmin}[2]{\underset{#1}{\operatorname{arg \, min}}\;#2}
+	\newcommand{\hArgmax}[2]{\underset{#1}{\operatorname{arg \, max}}\;#2}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
 
-
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V
 \title{
 	Rules
 }
@@ -112,6 +105,7 @@
 
 \begin{document}
 \maketitle
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
@@ -123,14 +117,21 @@
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\section{General}
+
+Use \LaTeX\ for reporting.
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Naming conventions}
 
 %Please use the following naming conventions.
 Please use file name convention ``$C$-$Y$-$T$-mt-q$N$-$S$" 
 for 
-\hbCode{.tex}, 
-\hbCode{.bib}, and 
-\hbCode{.zip} files,
+\hCode{.tex}, 
+\hCode{.bib}, and 
+\hCode{.zip} files,
 where\\
 $C$ is the course code, such as ``cmpe220'',\\
 $Y$ is the year in ``yyyy'' format,\\
@@ -141,12 +142,10 @@ For example
 ``cmpe220-2020-3-mt-q1-bingol,haluk.tex''.
 
 
-
-
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section{Moodle submission}
 
-You are expected to upload a \hbCode{$C$-$Y$-$T$-mt-q$N$-$S$.zip} file via Moodle.
+You are expected to upload a \hCode{$C$-$Y$-$T$-mt-q$N$-$S$.zip} file via Moodle.
 Your zip file should contain the following:
 \begin{enumerate}[i.]
 	
@@ -154,9 +153,9 @@ Your zip file should contain the following:
 	your paper in pdf format, no more than two pages,
 	
 	\item
-	LaTeX files (\hbCode{.tex}, 
-	\hbCode{.bib}, and 
-	\hbCode{.pdf} files for figures) to regenerate your pdf,
+	LaTeX files (\hCode{.tex}, 
+	\hCode{.bib}, and 
+	\hCode{.pdf} files for figures) to regenerate your pdf,
 	
 	\item
 	your code in your favorite language,
