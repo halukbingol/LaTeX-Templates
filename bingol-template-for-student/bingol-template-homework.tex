@@ -15,55 +15,90 @@
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-\documentclass[11pt,a4]{article}
-
-
-
-
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change every time
-\newcommand{\hbWhat}{m1q3}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+\documentclass[11pt,a4,twocolumn]{article}
 
 
 
 
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change once
-\newcommand{\hbYou}{BingolHaluk}
-\newcommand{\hbCourse}{cmpe220-2020-1}
+\newcommand{\hbYourName}{YourNameHere}
+\newcommand{\hbCourse}{cmpeXXX}
+\newcommand{\hbSemester}{Fall 2021}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change as necessary
+\newcommand{\hbWhat}{Homework}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
 
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V package
-\usepackage[utf8]{inputenc}
-%
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage[cmex10]{amsmath}
-\usepackage{hyperref}
-\usepackage[a4paper,top=2.3cm,bottom=4cm,left=2cm,right=4cm]{geometry}	% modified for electronic grading
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage[caption=false,font=footnotesize]{subfig}
-\usepackage{enumitem}
-%
-\usepackage[iso]{datetime}
-\newcommand{\hbTimeStamp}{v\today/\currenttime} % version
-%
-\usepackage{lastpage}	% last page
-\usepackage{fancyhdr}	% header/footer
-\pagestyle{fancy}
-%\lhead{aaa} 
-%\chead{aaa}
-\rhead{\hbCourse-\hbWhat-\hbYou}
-\lfoot{homework}
-\cfoot{\thepage/\pageref{LastPage}}
-\rfoot{\hbTimeStamp} 
-\renewcommand{\headrulewidth}{0.4pt} 
-\renewcommand{\footrulewidth}{0.4pt}
-%
-\usepackage{lipsum}  % dummy text
+	\usepackage[utf8]{inputenc}
+	%
+	\usepackage{amssymb}
+	\usepackage{amsthm}
+	\usepackage[cmex10]{amsmath}
+	\usepackage{hyperref}
+	\usepackage[a4paper,top=2.3cm,bottom=4cm,left=2cm,right=4cm]{geometry}
+	\usepackage{graphicx}
+	\usepackage{xcolor}
+	\usepackage[caption=false,font=footnotesize]{subfig}
+	\usepackage{enumitem}
+	%
+	\usepackage[iso]{datetime}
+	\newcommand{\hbTimeStamp}{v\today T\currenttime} % version
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Declarations v2021-04-01
+	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
+	\newcommand{\reftbl}[1]{Table~\ref{#1}}
+	\newcommand{\refsec}[1]{Sec.~\ref{#1}}
+	\newcommand{\refcite}[1]{Ref~\cite{#1}}
+	\newcommand{\refalg}[1]{Algorithm~\ref{#1}}
+	\newcommand{\reflst}[1]{List.~\ref{#1}}  % code listing
+	%
+	\newcommand{\refthm}[1]{Theorem~\ref{#1}}
+	\newcommand{\refthmA}[2]{\refthm{#1}(\ref{#2}}
+	\newcommand{\reflem}[1]{Lemma~\ref{#1}}
+	\newcommand{\refdef}[1]{Definition~\ref{#1}}
+	\newcommand{\refexmp}[1]{Example~\ref{#1}}
+	%
+	\newcommand{\hQuote}[1]{{\small \textsf{``#1''}}}
+	\newcommand{\hCode}[1]{\texttt{#1}}
+	\newcommand{\hIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
+	\newcommand{\hFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V running header @2021-05-05
+	\usepackage{lastpage}	% last page
+	%
+	\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\lhead{\hbYourName}
+	\lfoot{\hbWhat}
+	\cfoot{\thepage/\pageref{LastPage}}
+	\rfoot{\hbTimeStamp} 
+	\renewcommand{\headrulewidth}{0.4pt} 
+	\renewcommand{\footrulewidth}{0.4pt}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V @2021-05-05
+	\usepackage{lipsum}  % dummy text
+	%\lipsum[1-4]
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
@@ -71,12 +106,15 @@
 
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V title
 \title{
-	\hbCourse-\hbWhat-\hbYou\\
 	{\small 	
-		\hbTimeStamp\\
+		\hbCourse - 
+		\hbSemester\\
 	}
+	\hbWhat\\
+	hw-q1
 }
-\date{}
+\author{\hbYourName}
+\date{\today}
 %
 \begin{document}
 \maketitle
@@ -85,104 +123,40 @@
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V README
-{\color{red} % ~~~~
-	\textbf{README.}
-	This is how to use documentation for file submission and reporting.
-	Read it.
-	Then make sure that you remove this part.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\section{aaa} 
 
-	\emph{
-		Note that the name of this file does not comply 
-		the file naming convention described below. 
-		Do not forget to change it.
-	}
+Your solution.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V
+{\color{red} % ~~~~
+	\section*{Read me} 
+		
+	\textbf{Read.}
+	Please read\\
+	\href
+		{https://github.com/halukbingol/LaTeX-Templates/blob/master/bingol-template-for-student/bingol-readme.tex}
+		{https://github.com/halukbingol/LaTeX-Templates/bingol-template-for-student/bingol-readme.tex}
+	for details.
 	
-	\begin{itemize}
-		
-		\item 
-		Use A-B-C-D-E-X.F the file naming convention for all of your files,
-		e.g., ``cmpe220-2020-1-m1q1-BingolHaluk.tex'',
-		where:
-		\begin{description}
-			
-			\item[A]
-			Course code, e.g. ``cmpe220'' 
-			
-			\item[B]
-			Year in 4 digits, e.g. ``2020'' 
-			
-			\item[C] 
-			Semester in code: ``1'': Spring, ``2'': Summer, ``3'': Fall.
-			
-			\item[D] 
-			Assignment description, e.g., ``m1q3'', ``hw02'' or ``project''.
-			
-			\item[E]
-			Your last name and first name in camel case, e.g., ``BingolHaluk.tex''.
-			
-			\item[X]
-			If there is only one file, do not use this.
-			If there are more than one file in your submission, 
-			then you decide for a distinguisher.
-			For example,\\
-			``cmpe220-2020-1-m1q1-BingolHaluk-paper.tex'',\\
-			``cmpe220-2020-1-m1q1-BingolHaluk-paper-fig1.pdf'',\\
-			``cmpe220-2020-1-m1q1-BingolHaluk-paper-fig2.pdf'',\\
-			``cmpe220-2020-1-m1q1-BingolHaluk-paper.bib'',\\
-			``cmpe220-2020-1-m1q1-BingolHaluk-code-simulator.py'',\\
-			``cmpe220-2020-1-m1q1-BingolHaluk-code-dataAnalysis.py''.
-			
-			\item[F]
-			File extension, e.g., ``tex'', ``py''.
-		\end{description}
-		
-		\item 
-		Zip all the necessary files using the file convention,
-		e.g., ``cmpe220-2020-1-m1q1-BingolHaluk.zip''.
-		
-		\item 
-		Please submit your zip file to Moodle (moodle.boun.edu.tr) on time.
-		
-	\end{itemize}
+	\textbf{Erase.} 
+	Erase this part, in red, before submission.
+	
+	\textbf{References.}
+	This is a sample reference~\cite{fortunato2010}.
 } % color ~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-\section{aaa} 
-
-\textbf{
-Your text here.
-Remove this.
-}
-\lipsum[2-3]
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-\subsection{bbb}
-
-\textbf{
-Your text here.
-Remove this.
-}
-\lipsum[2-3]
-
-
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-\subsection{ccc}
-
-\textbf{
-Your text here.
-Remove this.
-}
-\lipsum[2-3]
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\section{Dummy}
+%
+%\lipsum[1-4]
 
 
 

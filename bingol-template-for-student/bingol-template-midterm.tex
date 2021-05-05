@@ -1,57 +1,62 @@
 % !TEX spellcheck = en_US
 
-\documentclass[11pt,a4,twocolumn]{article}
 
 
 
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V specific 
-%\usepackage{tikz}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
-
-
-
-
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Packages v2020-12-11
-	\usepackage[utf8]{inputenc} % To use Unicode characters
-	\usepackage[iso]{datetime}
-	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
-	%	\usepackage{etex}
-	\usepackage{amssymb}
-%	\usepackage{enumitem}
-	\usepackage{enumerate}
-
-	
-	\usepackage[a4paper]{geometry}
-	
-	\usepackage{xcolor}
-	% black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, 
-	% magenta, olive, orange, pink, purple, red, teal, violet, white, yellow
-		\definecolor{darkred}{rgb}{0.8,0.1,0.1}
-		\definecolor{darkgreen}{rgb}{0,0.5,0}
-		\definecolor{darkblue}{rgb}{0,0,0.5}
-		\colorlet{RED}{red}
-
-
-	\usepackage[colorlinks=true,linkcolor=red,urlcolor=blue,citecolor=red]%
-		{hyperref}
-	\usepackage{graphicx,epstopdf}
-	% \graphicspath{{fig}}
-	\graphicspath{{../common/figures/}}
-	% \DeclareGraphicsExtensions{.pdf,.jpeg,.png,.eps}
-	% \DeclareGraphicsRule{.tif}{png}{.png}%
-	%	{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-%	\usepackage{subfigure}
-%	\usepackage{subfig}
-	\usepackage{subcaption}
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V license
+% (NC) 2019 Haluk Bingol
+% github.com/halukbingol/LaTeX-Templates
+%
+% Licensees may copy, distribute, display, and perform the work and make derivative works 
+% and remixes based on it only for non-commercial purposes. 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Common Declarations v20200421
-%	\newcommand{\hbTimeStamp}{{\color{red}--Draft-- v\today/\currenttime}} % version
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\documentclass[11pt,a4,twocolumn]{article}
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change once
+\newcommand{\hbYourName}{YourNameHere}
+\newcommand{\hbCourse}{cmpeXXX}
+\newcommand{\hbSemester}{Fall 2021}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change as necessary
+\newcommand{\hbWhat}{Midterm}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V package
+	\usepackage[utf8]{inputenc}
 	%
+	\usepackage{amssymb}
+	\usepackage{amsthm}
+	\usepackage[cmex10]{amsmath}
+	\usepackage{hyperref}
+	\usepackage[a4paper,top=2.3cm,bottom=4cm,left=2cm,right=4cm]{geometry}
+	\usepackage{graphicx}
+	\usepackage{xcolor}
+	\usepackage[caption=false,font=footnotesize]{subfig}
+	\usepackage{enumitem}
+	%
+	\usepackage[iso]{datetime}
+	\newcommand{\hbTimeStamp}{v\today T\currenttime} % version
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Declarations v2021-04-01
 	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
 	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
 	\newcommand{\reftbl}[1]{Table~\ref{#1}}
@@ -66,51 +71,54 @@
 	\newcommand{\refdef}[1]{Definition~\ref{#1}}
 	\newcommand{\refexmp}[1]{Example~\ref{#1}}
 	%
-	\newcommand{\hbQuote}[1]{{\small \textsf{``#1''}}}
-	%
-	\newcommand{\hbCode}[1]{\texttt{#1}}
-	%
-	\newcommand{\hbIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
-	\newcommand{\hbFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
+	\newcommand{\hQuote}[1]{{\small \textsf{``#1''}}}
+	\newcommand{\hCode}[1]{\texttt{#1}}
+	\newcommand{\hIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
+	\newcommand{\hFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
 
-%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Math v2020-11-21
-	\usepackage{amsmath, amssymb,amsfonts,amsthm}
-	\newcommand{\hDefined}[1]{\textcolor{darkred}{\textit{#1}}}	
-	\newcommand{\hVec}[1]{\mathbf{#1}}	 
-	\newcommand{\hAbs}[1]{\ensuremath{\left \lvert \, #1 \, \right \rvert} } % |x|
-	\newcommand{\hMat}[1]{\mathbf{#1}}
-	\newcommand{\hArgmin}[2]{\underset{#1}{\operatorname{arg \, min}}\;#2}
-	\newcommand{\hArgmax}[2]{\underset{#1}{\operatorname{arg \, max}}\;#2}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V running header @2021-05-05
+	\usepackage{lastpage}	% last page
 	%
-	\theoremstyle{plain}
-	\newtheorem{thm}{Theorem}[section]
-	\newtheorem{lem}[thm]{Lemma}
-	\newtheorem{prop}[thm]{Proposition}
-	\newtheorem*{cor}{Corollary}
-	\theoremstyle{definition}
-	\newtheorem{defn}{Definition}[section]
-	\newtheorem{conj}{Conjecture}[section]
-	\newtheorem{exmp}{Example}[section]
-	\theoremstyle{remark}
-	\newtheorem*{rem}{Remark}
-	\newtheorem*{note}{Note}
+	\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\lhead{\hbYourName}
+	\lfoot{\hbWhat}
+	\cfoot{\thepage/\pageref{LastPage}}
+	\rfoot{\hbTimeStamp} 
+	\renewcommand{\headrulewidth}{0.4pt} 
+	\renewcommand{\footrulewidth}{0.4pt}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V @2021-05-05
+	\usepackage{lipsum}  % dummy text
+	%\lipsum[1-4]
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V title
 \title{
-	Midterm-Qx\\
-	CourseName Semester\\
+	{\small 	
+		\hbCourse - 
+		\hbSemester\\
+	}
+	\hbWhat\\
+	mt-q1
 }
-\author{YourName}
-%\date{}							% Activate to display a given date or no date
-
+\author{\hbYourName}
+\date{\today}
+%
 \begin{document}
 \maketitle
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
@@ -127,6 +135,28 @@ Your solution.
 \subsection{Part A}
 
 If the question has parts.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V
+{\color{red} % ~~~~
+	\section*{Read me} 
+		
+	\textbf{Read.}
+	Please read\\
+	\href
+		{https://github.com/halukbingol/LaTeX-Templates/blob/master/bingol-template-for-student/bingol-readme.tex}
+		{https://github.com/halukbingol/LaTeX-Templates/bingol-template-for-student/bingol-readme.tex}
+	for details.
+	
+	\textbf{Erase.} 
+	Erase this part, in red, before submission.
+	
+	\textbf{References.}
+	This is a sample reference~\cite{fortunato2010}.
+} % color ~~~~
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 

@@ -21,7 +21,7 @@
 
 
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change once
-\newcommand{\hbYou}{YourNameHere}
+\newcommand{\hbYourName}{YourNameHere}
 \newcommand{\hbCourse}{cmpeXXX}
 \newcommand{\hbSemester}{Fall 2021}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
@@ -37,20 +37,20 @@
 
 
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V package
-\usepackage[utf8]{inputenc}
-%
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage[cmex10]{amsmath}
-\usepackage{hyperref}
-\usepackage[a4paper,top=2.3cm,bottom=4cm,left=2cm,right=4cm]{geometry}	% modified for electronic grading
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage[caption=false,font=footnotesize]{subfig}
-\usepackage{enumitem}
-%
-\usepackage[iso]{datetime}
-\newcommand{\hbTimeStamp}{v\today T\currenttime} % version
+	\usepackage[utf8]{inputenc}
+	%
+	\usepackage{amssymb}
+	\usepackage{amsthm}
+	\usepackage[cmex10]{amsmath}
+	\usepackage{hyperref}
+	\usepackage[a4paper,top=2.3cm,bottom=4cm,left=2cm,right=4cm]{geometry}
+	\usepackage{graphicx}
+	\usepackage{xcolor}
+	\usepackage[caption=false,font=footnotesize]{subfig}
+	\usepackage{enumitem}
+	%
+	\usepackage[iso]{datetime}
+	\newcommand{\hbTimeStamp}{v\today T\currenttime} % version
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
@@ -81,15 +81,24 @@
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V running header @2021-05-05
-\usepackage{lastpage}	% last page
-%
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\lfoot{proposal}
-\cfoot{\thepage/\pageref{LastPage}}
-\rfoot{\hbTimeStamp} 
-\renewcommand{\headrulewidth}{0.4pt} 
-\renewcommand{\footrulewidth}{0.4pt}
+	\usepackage{lastpage}	% last page
+	%
+	\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\lhead{\hbYourName}
+	\lfoot{\hbWhat}
+	\cfoot{\thepage/\pageref{LastPage}}
+	\rfoot{\hbTimeStamp} 
+	\renewcommand{\headrulewidth}{0.4pt} 
+	\renewcommand{\footrulewidth}{0.4pt}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V @2021-05-05
+	\usepackage{lipsum}  % dummy text
+	%\lipsum[1-4]
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
@@ -98,17 +107,19 @@
 %: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V title
 \title{
 	{\small 	
-		for \hbCourse-\hbSemester\\
+		\hbCourse - 
+		\hbSemester\\
 	}
 	\hbWhat\\
 	Your Title
 }
-\author{\hbYou}
+\author{\hbYourName}
 \date{\today}
 %
 \begin{document}
 \maketitle
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
 
 
 
@@ -133,35 +144,40 @@ Your method is describe as a summary.
 \section{Your expectations} 
 
 What kind of results do you expect?
-
-
-
-
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V
 {\color{red} % ~~~~
-	% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 	\section*{Read me} 
+		
+	\textbf{Read.}
+	Please read\\
+	\href
+		{https://github.com/halukbingol/LaTeX-Templates/blob/master/bingol-template-for-student/bingol-readme.tex}
+		{https://github.com/halukbingol/LaTeX-Templates/bingol-template-for-student/bingol-readme.tex}
+	for details.
 	
 	\textbf{Erase.} 
 	Erase this part, in red, before submission.
 	
-	\textbf{\LaTeX.}
-	Make sure that you \emph{update} the following fields in this \hCode{.tex} file:
-	``hbYou'',
-	``hbCourse'',
-	``hbSemester''.
-	
-	\textbf{Length.} 
-	One page is preferred. 
-	No more than two pages.
+	\textbf{References.}
+	This is a sample reference~\cite{fortunato2010}.
 } % color ~~~~
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
 
 
 
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-\bibliographystyle{ieeetr}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\section{Dummy}
 
-\bibliography{bingol-template-paperForProject}
+\lipsum[1-4]
+
+
+
+
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+%\bibliographystyle{ieeetr}
+%
+%\bibliography{bingol-template-project-report}
 
 
 
