@@ -1,0 +1,170 @@
+% !TEX spellcheck = en_US
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V license
+% (NC) 2019 Haluk Bingol
+% github.com/halukbingol/LaTeX-Templates
+%
+% Licensees may copy, distribute, display, and perform the work and make derivative works 
+% and remixes based on it only for non-commercial purposes. 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\documentclass[11pt,a4,twocolumn]{article}
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** change once
+\newcommand{\hbYou}{YourNameHere}
+\newcommand{\hbCourse}{cmpeXXX}
+\newcommand{\hbSemester}{Fall 2021}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V **** do not change
+\newcommand{\hbWhat}{Project Proposal}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V package
+\usepackage[utf8]{inputenc}
+%
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[cmex10]{amsmath}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2.3cm,bottom=4cm,left=2cm,right=4cm]{geometry}	% modified for electronic grading
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{enumitem}
+%
+\usepackage[iso]{datetime}
+\newcommand{\hbTimeStamp}{v\today T\currenttime} % version
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V HB Declarations v2021-04-01
+	\newcommand{\reffig}[1]{Fig.~\ref{#1}}
+	\newcommand{\refeq}[1]{Eq.~\ref{#1}}
+	\newcommand{\reftbl}[1]{Table~\ref{#1}}
+	\newcommand{\refsec}[1]{Sec.~\ref{#1}}
+	\newcommand{\refcite}[1]{Ref~\cite{#1}}
+	\newcommand{\refalg}[1]{Algorithm~\ref{#1}}
+	\newcommand{\reflst}[1]{List.~\ref{#1}}  % code listing
+	%
+	\newcommand{\refthm}[1]{Theorem~\ref{#1}}
+	\newcommand{\refthmA}[2]{\refthm{#1}(\ref{#2}}
+	\newcommand{\reflem}[1]{Lemma~\ref{#1}}
+	\newcommand{\refdef}[1]{Definition~\ref{#1}}
+	\newcommand{\refexmp}[1]{Example~\ref{#1}}
+	%
+	\newcommand{\hQuote}[1]{{\small \textsf{``#1''}}}
+	\newcommand{\hCode}[1]{\texttt{#1}}
+	\newcommand{\hIdea}[1]{{\color{olive}{\scriptsize [{#1}]}}}
+	\newcommand{\hFootnote}[2]{\footnote{{\color{red} @#1 : }#2}}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V running header @2021-05-05
+\usepackage{lastpage}	% last page
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lfoot{proposal}
+\cfoot{\thepage/\pageref{LastPage}}
+\rfoot{\hbTimeStamp} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+%: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V title
+\title{
+	{\small 	
+		for \hbCourse-\hbSemester\\
+	}
+	\hbWhat\\
+	Your Title
+}
+\author{\hbYou}
+\date{\today}
+%
+\begin{document}
+\maketitle
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\section{Motivation} 
+
+Why do you select this?
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\section{Your method} 
+
+Your method is describe as a summary.
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\section{Your expectations} 
+
+What kind of results do you expect?
+
+
+
+
+{\color{red} % ~~~~
+	% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	\section*{Read me} 
+	
+	\textbf{Erase.} 
+	Erase this part, in red, before submission.
+	
+	\textbf{\LaTeX.}
+	Make sure that you \emph{update} the following fields in this \hCode{.tex} file:
+	``hbYou'',
+	``hbCourse'',
+	``hbSemester''.
+	
+	\textbf{Length.} 
+	One page is preferred. 
+	No more than two pages.
+} % color ~~~~
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\bibliographystyle{ieeetr}
+
+\bibliography{bingol-template-paperForProject}
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+\end{document}
