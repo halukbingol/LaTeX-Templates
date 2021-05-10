@@ -133,6 +133,7 @@
 		breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
 		breaklines=true,                 % sets automatic line breaking
 		captionpos=b,                    % sets the caption-position to bottom
+		columns=fullflexible,
 		commentstyle=\color{hbGreen},    % comment style
 		deletekeywords={...},            % if you want to delete keywords from the given language
 		escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
@@ -157,6 +158,48 @@
 	}
 	\lstset{basicstyle=\ttfamily}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V define BibTeX
+\lstdefinelanguage{BibTeX}{%
+	keywords={%
+		@article,@book,@collectedbook,@conference,@electronic,@ieeetranbstctl,%
+		@inbook,@incollectedbook,@incollection,@injournal,@inproceedings,%
+		@manual,@mastersthesis,@misc,@patent,@periodical,@phdthesis,@preamble,%
+		@proceedings,@standard,@string,@techreport,@unpublished%
+	},
+	comment=[l][\itshape]{@comment},
+	sensitive=false,
+}% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V define file: code-sample-B.bib
+\begin{filecontents*}{code-sample.bib}
+@misc{enwiki:matrix,
+    author = "{Wikipedia contributors}",
+    title = "Matrix (mathematics) --- {Wikipedia}{,} The Free Encyclopedia",
+    year = "2021",
+    url = "https://en.wikipedia.org/w/index.php?title=Matrix_(mathematics)&oldid=1021630293",
+    note = "[Online; accessed 10-May-2021]"
+}
+\end{filecontents*}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ V define file: code-sample.java
+\begin{filecontents*}{code-sample.java}
+public class Node {
+	String name;
+	String lastName;
+	Node link;
+
+	public Node(){
+		name ="";
+		lastName="";
+		link = null;
+	}
+}
+\end{filecontents*}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ A
+
 
 
 
@@ -988,6 +1031,25 @@ in this order.
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsubsection{Citing a web page}
+
+Use \hCode{misc} bib-type for citing a web page~\cite{%
+	se:HowToCiteWebPage}.
+This is an example of a citation to matrix article of wikipedia~\cite{%
+	enwiki:matrix}.
+
+
+
+% +++++++++++++++++++++++++++++++++++++++ V
+%: -List.
+\lstinputlisting[language=BibTeX,label=lst:QuickStart,caption=misc bib-type]
+	{code-sample.bib}
+% +++++++++++++++++++++++++++++++++++++++ A
+
+
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsubsection{Unsolved problems}
 
 Citing a webpage is an open question for me.
@@ -1042,7 +1104,7 @@ See
 \href
 	{https://stackoverflow.com/questions/9903541/finding-diff-between-current-and-last-version}
 	{Finding diff between current and last version}~\cite{%
-	stackoverflow0findingDiff}.
+	sof:findingDiff}.
 
 
 
